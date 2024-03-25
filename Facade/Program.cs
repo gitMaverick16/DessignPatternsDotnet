@@ -1,9 +1,4 @@
-﻿using Facade.Example01;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Facade.Example03;
 
 namespace Facade
 {
@@ -11,8 +6,10 @@ namespace Facade
     {
         static void Main(string[] args)
         {
-            SystemsFacade systemsFacade = new();
-            systemsFacade.Operation();
+            ComputerFacade computerFacade = new ComputerFacade();
+            computerFacade.StartComputer();
+            Console.WriteLine();
+            computerFacade.StopComputer();
         }
     }
 }
