@@ -15,6 +15,6 @@ ITextBox textBox = themeFactory.CreateTextBox();
 textBox.Render();
 
 //Example 02
-//IPaymentGatewayFactory paymentGatewayFactory = new StripeFactory();
-//var paymentService = new PaymentService(paymentGatewayFactory);
-//paymentService.MakePayment();
+IPaymentGatewayFactory paymentGatewayFactory = new StripeFactory();
+var paymentService = new PaymentService(paymentGatewayFactory);
+paymentService.MakePayment();
