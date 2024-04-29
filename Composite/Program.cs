@@ -1,9 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Example 01
-using Composite.Example01;
+﻿using Composite.Example01;
 using Composite.Example02;
+using Composite.Example03;
 using System.Reflection;
 
+//Example 01
 var file1 = new AppFile("File1");
 var file2 = new AppFile("File2");
 var file3 = new AppFile("File3");
@@ -36,4 +36,24 @@ susan.Add(bob);
 
 susan.Display(1);
 
+//Example03
+//Create products
+var laptop = new Product("Laptop", 1000);
+var phone = new Product("Phone", 500);
+
+// Create bundle of products
+var bundleProductos = new Bundle();
+bundleProductos.Add(laptop);
+bundleProductos.Add(phone);
+
+// Create another product
+var mouse = new Product("Mouse", 20);
+
+// Create bubdle of bundles
+var bundleBundles = new Bundle();
+bundleBundles.Add(bundleProductos); // Add the bundle of products
+bundleBundles.Add(mouse); // Add anothe product directly
+
+// Show bundle price of bundles
+bundleBundles.ShowPrice();
 
